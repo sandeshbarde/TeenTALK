@@ -233,6 +233,9 @@ const getUserCertificates = async (userId) => {
     return {
       ...cert,
       user_name: user ? user.full_name : 'Participant',
+      recipient_name: user ? user.full_name : 'Participant',
+      student_name: user ? user.full_name : 'Participant',
+      employee_name: user ? user.full_name : 'Participant',
       certificate_name: title || (cert.program_type === 'employee' ? 'TeenTalk Workplace Safety & POSH Awareness Program' : 'TeenTalk Teen Learning & Awareness Program'),
       organization_name: cert.organization_name || (org ? org.name : 'TeenTalk Global Network'),
     };

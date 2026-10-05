@@ -140,7 +140,7 @@ export const EmployeeDashboard = () => {
               </Button>
             </Link>
             {hasCertificate || allCompleted ? (
-              <Link to="/dashboard/employee/learning">
+              <Link to={hasCertificate ? "/dashboard/employee/certificates" : "/dashboard/employee/learning"}>
                 <Button
                   variant="outline"
                   size="sm"

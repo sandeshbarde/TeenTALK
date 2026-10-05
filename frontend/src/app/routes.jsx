@@ -262,6 +262,14 @@ export const AppRoutes = () => {
             </RoleGuard>
           }
         />
+        <Route
+          path="employee/certificates/:courseId"
+          element={
+            <RoleGuard allowedRoles={['employee']}>
+              <CertificatePage />
+            </RoleGuard>
+          }
+        />
 
         {/* School Admin Track (Tejas) */}
         <Route

@@ -44,7 +44,7 @@ export const EmployeeLearningPage = () => {
       const res = await apiClient.post('/certificate/employee-program');
       if (res.success && res.data) {
         showToast('Workplace Safety & POSH Certificate generated!', 'success');
-        navigate(`/dashboard/teen/certificates/${res.data.id || res.data.certificate_code}`);
+        navigate(`/dashboard/employee/certificates/${res.data.id || res.data.certificate_code}`);
       }
     } catch (err) {
       showToast(err.message || 'Failed to generate certificate', 'error');
